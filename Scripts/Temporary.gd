@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_Temporary_pressed():
-	get_parent().get_node("Picture").zoomOut()
+	get_parent().get_node("Food Image").checkGuess()
 	pass # Replace with function body.

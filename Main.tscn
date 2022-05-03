@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Picture.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Picture.gd" type="Script" id=1]
 [ext_resource path="res://Assets/next.png" type="Texture" id=2]
 [ext_resource path="res://Assets/ramen.jpg" type="Texture" id=3]
-[ext_resource path="res://Temporary.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Temporary.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Input.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Fonts/input_font.tres" type="DynamicFont" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="Main" type="Node2D"]
 
@@ -43,10 +47,31 @@ margin_right = 980.0
 margin_bottom = 580.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="Input" type="LineEdit" parent="Background/Input Background"]
+[node name="Panel" type="Panel" parent="Background/Input Background"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 950.0
 margin_bottom = 90.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/Input Background/Panel"]
+margin_right = 940.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="Background/Input Background/Panel/HBoxContainer"]
+margin_top = 9.0
+margin_right = 31.0
+margin_bottom = 71.0
+custom_fonts/font = ExtResource( 6 )
+text = " > "
+
+[node name="Input" type="LineEdit" parent="Background/Input Background/Panel/HBoxContainer"]
+margin_left = 35.0
+margin_right = 940.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+custom_styles/focus = SubResource( 2 )
+max_length = 48
+script = ExtResource( 5 )
 
 [connection signal="pressed" from="Background/Temp Button" to="Background/Temp Button" method="_on_Temporary_pressed"]
