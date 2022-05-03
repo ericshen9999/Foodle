@@ -9,11 +9,11 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="."]
 margin_right = 1000.0
 margin_bottom = 600.0
 
-[node name="Picture" type="Sprite" parent="Panel"]
+[node name="Food Image" type="Sprite" parent="Background"]
 position = Vector2( 500, 238 )
 scale = Vector2( 0.33, 0.33 )
 texture = ExtResource( 3 )
@@ -21,7 +21,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 1200, 1200 )
 script = ExtResource( 1 )
 
-[node name="Temporary" type="TextureButton" parent="Panel"]
+[node name="Temp Button" type="TextureButton" parent="Background"]
 anchor_left = 0.00369143
 anchor_top = -0.188063
 anchor_right = 0.00369143
@@ -36,17 +36,17 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="Input Background" type="Panel" parent="Background"]
 margin_left = 20.0
 margin_top = 480.0
 margin_right = 980.0
 margin_bottom = 580.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 30.0
-margin_top = 490.0
-margin_right = 970.0
-margin_bottom = 570.0
+[node name="Input" type="LineEdit" parent="Background/Input Background"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 950.0
+margin_bottom = 90.0
 
-[connection signal="pressed" from="Panel/Temporary" to="Panel/Temporary" method="_on_Temporary_pressed"]
+[connection signal="pressed" from="Background/Temp Button" to="Background/Temp Button" method="_on_Temporary_pressed"]
