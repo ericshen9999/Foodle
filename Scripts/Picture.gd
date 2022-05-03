@@ -1,33 +1,31 @@
 extends Sprite
 
-var zoomPhase = 1
 var maxZoom = 6
-var initScale
 
 func _ready():
-	#Store inital scale
-	initScale = scale
 	#Intial picture
-	calcZoom()
-	scale /= ((1.0 / maxZoom) * zoomPhase)
+	calcZoom(1)
+	scale = Vector2(300.0/texture.get_width(), 300.0/texture.get_width())
+	scale /= ((1.0 / maxZoom) * 1)
 	pass
 
-func zoomOut():
-	#Zooms out of picture
-	print(zoomPhase)
-	zoomPhase += 1
-	calcZoom()
-	scale = initScale
+func changeImage(num):
+	self.texture = load("res://Assets/Foods/" + str(num) + ".jpg")
+	zoom(1)
+
+func zoom(zoomPhase):
+	calcZoom(zoomPhase)
+	scale = Vector2(300.0/texture.get_width(), 300.0/texture.get_width())
 	scale /= ((1.0 / maxZoom) * zoomPhase)
 	#Resets the imagine just in case
-	if zoomPhase == maxZoom:
-		zoomPhase = 1
-		#Set new picture
 
 #Zoom out from the middle
-func calcZoom():
+func calcZoom(zoomPhase):
 	region_rect = Rect2(
-	texture.get_width() / 2 * (0.167 * (6 - zoomPhase)), 
-	texture.get_width() / 2 * (0.167 * (6 - zoomPhase)), 
-	texture.get_width() * (0.167 * zoomPhase), 
-	texture.get_width() * (0.167 * zoomPhase))
+	texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
+	texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
+	texture.get_width() * ((1.0 / maxZoom) * zoomPhase), 
+	texture.get_width() * ((1.0 / maxZoom) * zoomPhase))
+
+func getMax():
+	return maxZoom
