@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_Temporary_pressed():
-	get_parent().get_node("Food Image").checkGuess()
+	get_parent().get_node("Food Image").checkGuess("Test")
 	pass # Replace with function body.

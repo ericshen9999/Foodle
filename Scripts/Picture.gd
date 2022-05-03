@@ -12,12 +12,6 @@ func _ready():
 	scale /= ((1.0 / maxZoom) * zoomPhase)
 	pass
 
-func checkGuess():
-	if(false):
-		pass
-	else:
-		zoomOut()
-
 func zoomOut():
 	#Zooms out of picture
 	print(zoomPhase)
