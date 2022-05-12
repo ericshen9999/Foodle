@@ -11,6 +11,7 @@ func _ready():
 
 func changeImage(num):
 	self.texture = load("res://Assets/Foods/" + str(num) + ".jpg")
+	get_parent().get_node("Blur").material.set_shader_param('blurSize', 30)
 	zoom(1)
 
 func changeImagePng(num):
@@ -24,6 +25,8 @@ func zoom(zoomPhase):
 	calcZoom(zoomPhase)
 	scale = Vector2(300.0/texture.get_width(), 300.0/texture.get_width())
 	scale /= ((1.0 / maxZoom) * zoomPhase)
+	var currBlur = get_parent().get_node("Blur").material.get_shader_param('blurSize')
+	get_parent().get_node("Blur").material.set_shader_param('blurSize', currBlur - 5)
 	#Resets the imagine just in case
 
 #Zoom out from the middle

@@ -6,17 +6,35 @@ var nodeImage
 var currentImage
 
 var file
-var path = "res://FoodData.json"
+var path = "res://FoodDatabase.json"
 var data
+
+var monthData = {
+	1: 0,
+	2: 31,
+	3: 59,
+	4: 90,
+	5: 120,
+	6: 151,
+	7: 181,
+	8: 212,
+	9: 243,
+	10: 273,
+	11: 304,
+	12: 334
+}
 var default_data = {
 	"1" : ["Noodle"],
-	"2" : ["Dumpling"]
+	"2" : ["Dumpling"],
+	"132" : ["Ramen"]
 }
 
 func _ready() -> void:
 	nodeImage = get_node("/root/Main/Background/Food Image")
 	zoomCount = 1
-	currentImage = 1
+	var index = monthData[OS.get_date()["month"]] + OS.get_date()["day"]
+	currentImage = index
+	nodeImage.changeImage(currentImage)
 	maxCount = nodeImage.getMax()
 	
 	file = File.new()
@@ -46,6 +64,7 @@ func checkGuess(input):
 			nodeImage.changeImagePng("0.1")
 
 func nextImage():
+	#leaving this here until we have a bigger json xd
 	zoomCount = 1
 	currentImage += 1
 	if (currentImage > 2):
