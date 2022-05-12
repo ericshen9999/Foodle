@@ -33,16 +33,19 @@ func _ready() -> void:
 	print(data["1"][0])
 
 func checkGuess(input):
-	if(data[str(currentImage)].has(input)):
-		print("Correct")
+	print(nodeImage.getTexture())
+	if(nodeImage.getTexture() == "res://Assets/Foods/0.1.png" or 
+		nodeImage.getTexture() == "res://Assets/Foods/0.2.png"):
+		nextImage()
+	elif(data[str(currentImage)].has(input)):
+		nodeImage.changeImagePng("0.2")
 	else:
 		zoomCount += 1
 		nodeImage.zoom(zoomCount)
 		if (zoomCount >= maxCount):
-			failedImage()
+			nodeImage.changeImagePng("0.1")
 
-func failedImage():
-	print("Failure")
+func nextImage():
 	zoomCount = 1
 	currentImage += 1
 	if (currentImage > 2):

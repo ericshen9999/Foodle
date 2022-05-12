@@ -13,6 +13,13 @@ func changeImage(num):
 	self.texture = load("res://Assets/Foods/" + str(num) + ".jpg")
 	zoom(1)
 
+func changeImagePng(num):
+	self.texture = load("res://Assets/Foods/" + str(num) + ".png")
+	zoom(6)
+
+func getTexture():
+	return self.texture.resource_path
+
 func zoom(zoomPhase):
 	calcZoom(zoomPhase)
 	scale = Vector2(300.0/texture.get_width(), 300.0/texture.get_width())
