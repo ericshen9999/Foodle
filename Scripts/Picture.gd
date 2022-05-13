@@ -11,7 +11,8 @@ func _ready():
 
 func changeImage(num):
 	self.texture = load("res://Assets/Foods/" + str(num) + ".jpg")
-	get_parent().get_node("Blur").material.set_shader_param('blurSize', 30)
+	if float(num) > 1:
+		get_parent().get_node("Blur").material.set_shader_param('blurSize', 30)
 	zoom(1)
 
 func changeImagePng(num):

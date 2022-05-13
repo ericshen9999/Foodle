@@ -1,5 +1,45 @@
 {
-    "1": ["Ramen"],
-    "2": ["Dumplings"],
-    "132": ["Noodle"]
+    "1": ["RAMEN"],
+    "2": ["POTSTICKERS, DUMPLINGS"],
+    "3": ["PIZZA"],
+    "4": ["LASAGNA"],
+    "5": ["FRIED RICE"],
+    "6": ["PHO"],
+    "7": ["CHICKEN NOODLE SOUP"],
+    "8": ["CHICKEN TIKKA MASALA"],
+    "9": ["HOT DOG", "HOT DOGS"],
+    "10": ["BURGER", "HAMBURGER", "CHEESEBURGER"],
+    "11": ["FRIES", "FRENCH FRIES"],
+    "12": ["CHICKEN SANDWICH"],
+    "13": ["TACOS", "TACO"],
+    "14": ["BURRITOS", "BURRITO"],
+    "15": ["QUESADILLA, CHEESE QUESADILLA"],
+    "16": ["BAKED POTATO"],
+    "17": ["BEEF NOODLE SOUP"],
+    "18": ["SCALLION PANCAKES", "GREEN ONION PANCAKES", "SCALLION PANCAKE", "GREEN ONION PANCAKE"],
+    "19": ["BEEF WELLINGTON"],
+    "20": ["RATATOUILLE"],
+    "21": ["RAVIOLI", "CHEESE RAVIOLI"],
+    "22": ["SUSHI, CALIFORNIA ROLL"],
+    "23": ["SASHIMI"],
+    "24": ["PEKING DUCK"],
+    "25": ["ORANGE CHICKEN"],
+    "26": ["CHOW MEIN"],
+    "27": ["UDON"],
+    "28": ["TEMPURA SHRIMP", "SHRIMP TEMPURA"],
+    "29": ["BOBA", "MILK TEA", "BUBBLE TEA"],
+    "30": ["SOBA"],
+    "31": ["MAPO TOFU"],
+    "32": ["TAKOYAKI"],
+    "33": ["FRIED CHICKEN"],
+    "34": ["GRILLED SALMON"],
+    "35": ["MACARONI AND CHEESE", "MAC AND CHEESE"],
+    "36": ["SPAGHETTI AND MEATBALLS"],
+    
+
+
+
+
+
+    "132": ["NOODLE"]
 }

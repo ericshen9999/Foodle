@@ -38,10 +38,10 @@ func _ready() -> void:
 	maxCount = nodeImage.getMax()
 	
 	file = File.new()
-	if not file.file_exists(path):
-		data = default_data.duplicate(true)
-		print(data)
-		return
+#	if not file.file_exists(path):
+#		data = default_data.duplicate(true)
+#		print(data)
+#		return
 	file.open(path, File.READ)
 	var text = file.get_as_text()
 	data = parse_json(text)
@@ -49,13 +49,13 @@ func _ready() -> void:
 	print(data)
 	print(data["1"])
 	print(data["1"][0])
-
+	
 func checkGuess(input):
 	print(nodeImage.getTexture())
 	if(nodeImage.getTexture() == "res://Assets/Foods/0.1.png" or 
 		nodeImage.getTexture() == "res://Assets/Foods/0.2.png"):
 		nextImage()
-	elif(data[str(currentImage)].has(input)):
+	elif(data[str(currentImage)].has(input.to_upper())):
 		nodeImage.changeImagePng("0.2")
 	else:
 		zoomCount += 1
@@ -67,6 +67,6 @@ func nextImage():
 	#leaving this here until we have a bigger json xd
 	zoomCount = 1
 	currentImage += 1
-	if (currentImage > 2):
+	if (currentImage > 4):
 		currentImage = 1
 	nodeImage.changeImage(currentImage)
