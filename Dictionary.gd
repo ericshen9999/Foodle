@@ -8,6 +8,7 @@ var currentImage
 var file
 var path = "res://FoodDatabase.json"
 var data
+var size
 
 var monthData = {
 	1: 0,
@@ -33,28 +34,36 @@ func _ready() -> void:
 	nodeImage = get_node("/root/Main/Background/Food Image")
 	zoomCount = 1
 	var index = monthData[OS.get_date()["month"]] + OS.get_date()["day"]
+	print(index)
 	currentImage = index
 	nodeImage.changeImage(currentImage)
 	maxCount = nodeImage.getMax()
 	
+	var dir = Directory.new()
+	if dir.open("res://Assets/Foods") == OK:
+		dir.list_dir_begin()
+
+		
 	file = File.new()
-#	if not file.file_exists(path):
-#		data = default_data.duplicate(true)
-#		print(data)
-#		return
+	if not file.file_exists(path):
+		data = default_data.duplicate(true)
+		print(data)
+		return
+	
 	file.open(path, File.READ)
 	var text = file.get_as_text()
 	data = parse_json(text)
 	file.close()
-	print(data)
-	print(data["1"])
-	print(data["1"][0])
+	#print(data)
+	#print(data[str(index)])
+	#print(data[str(index)][0])
 	
 func checkGuess(input):
 	print(nodeImage.getTexture())
 	if(nodeImage.getTexture() == "res://Assets/Foods/0.1.png" or 
 		nodeImage.getTexture() == "res://Assets/Foods/0.2.png"):
 		nextImage()
+	
 	elif(data[str(currentImage)].has(input.to_upper())):
 		nodeImage.changeImagePng("0.2")
 	else:

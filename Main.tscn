@@ -57,9 +57,6 @@ margin_top = 130.0
 margin_right = 660.0
 margin_bottom = 450.0
 custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Food Image" type="Sprite" parent="Background"]
 position = Vector2( 500, 290 )
@@ -81,9 +78,6 @@ margin_top = 480.0
 margin_right = 980.0
 margin_bottom = 580.0
 custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Input Background" type="Panel" parent="Background/Outline2"]
 margin_left = 10.0
@@ -108,9 +102,9 @@ margin_left = 53.0
 margin_right = 940.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 6 )
 max_length = 48
 script = ExtResource( 5 )
 
@@ -129,4 +123,5 @@ __meta__ = {
 
 [node name="Control Node" type="Node" parent="."]
 script = ExtResource( 2 )
+
 [connection signal="text_entered" from="Background/Outline2/Input Background/Container/Input" to="Background/Outline2/Input Background/Container/Input" method="_on_Input_text_entered"]

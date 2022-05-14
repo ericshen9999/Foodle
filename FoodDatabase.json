@@ -3,10 +3,10 @@
     "2": ["POTSTICKERS, DUMPLINGS"],
     "3": ["PIZZA"],
     "4": ["LASAGNA"],
-    "5": ["FRIED RICE"],
+    "5": ["FRIED RICE", "RICE"],
     "6": ["PHO"],
-    "7": ["CHICKEN NOODLE SOUP"],
-    "8": ["CHICKEN TIKKA MASALA"],
+    "7": ["CHICKEN NOODLE SOUP", "CHICKEN SOUP"],
+    "8": ["CHICKEN TIKKA MASALA", "TIKKA MASALA"],
     "9": ["HOT DOG", "HOT DOGS"],
     "10": ["BURGER", "HAMBURGER", "CHEESEBURGER"],
     "11": ["FRIES", "FRENCH FRIES"],
@@ -15,7 +15,7 @@
     "14": ["BURRITOS", "BURRITO"],
     "15": ["QUESADILLA, CHEESE QUESADILLA"],
     "16": ["BAKED POTATO"],
-    "17": ["BEEF NOODLE SOUP"],
+    "17": ["BEEF NOODLE SOUP", "BEEF SOUP"],
     "18": ["SCALLION PANCAKES", "GREEN ONION PANCAKES", "SCALLION PANCAKE", "GREEN ONION PANCAKE"],
     "19": ["BEEF WELLINGTON"],
     "20": ["RATATOUILLE"],
@@ -35,11 +35,25 @@
     "34": ["GRILLED SALMON"],
     "35": ["MACARONI AND CHEESE", "MAC AND CHEESE"],
     "36": ["SPAGHETTI AND MEATBALLS"],
-    
+    "37": ["SHORT RIBS", "RIBS"],
+    "38": ["BAGELS", "BAGEL"],
+    "39": ["DONUTS", "DONUT"],
+    "40": ["PASTA"],
+    "41": ["WHITE BREAD", "BREAD"],
+    "42": ["CAKE", "CHOCOLATE CAKE"],
+    "43": ["CARROT"],
+    "44": ["CORN"],
+    "45": ["CEREAL"],
+    "46": ["MUFFIN],
 
 
 
 
 
-    "132": ["NOODLE"]
+
+
+
+
+
+    "133": ["NOODLE"]
 }

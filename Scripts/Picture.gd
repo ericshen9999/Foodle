@@ -24,7 +24,7 @@ func getTexture():
 
 func zoom(zoomPhase):
 	calcZoom(zoomPhase)
-	scale = Vector2(300.0/texture.get_width(), 300.0/texture.get_width())
+	scale = Vector2(300.0/self.texture.get_width(), 300.0/self.texture.get_width())
 	scale /= ((1.0 / maxZoom) * zoomPhase)
 	var currBlur = get_parent().get_node("Blur").material.get_shader_param('blurSize')
 	get_parent().get_node("Blur").material.set_shader_param('blurSize', currBlur - 5)
@@ -33,10 +33,10 @@ func zoom(zoomPhase):
 #Zoom out from the middle
 func calcZoom(zoomPhase):
 	region_rect = Rect2(
-	texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
-	texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
-	texture.get_width() * ((1.0 / maxZoom) * zoomPhase), 
-	texture.get_width() * ((1.0 / maxZoom) * zoomPhase))
+	self.texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
+	self.texture.get_width() / 2.0 * ((1.0 / maxZoom) * (maxZoom - zoomPhase)), 
+	self.texture.get_width() * ((1.0 / maxZoom) * zoomPhase), 
+	self.texture.get_width() * ((1.0 / maxZoom) * zoomPhase))
 
 func getMax():
 	return maxZoom
