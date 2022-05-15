@@ -117,9 +117,6 @@ custom_fonts/font = ExtResource( 4 )
 text = "Guess That FOODLE!"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Control Node" type="Node" parent="."]
 script = ExtResource( 2 )

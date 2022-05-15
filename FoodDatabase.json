@@ -1,6 +1,6 @@
 {
     "1": ["RAMEN"],
-    "2": ["POTSTICKERS, DUMPLINGS"],
+    "2": ["POTSTICKERS", "DUMPLINGS"],
     "3": ["PIZZA"],
     "4": ["LASAGNA"],
     "5": ["FRIED RICE", "RICE"],
@@ -35,7 +35,7 @@
     "34": ["GRILLED SALMON"],
     "35": ["MACARONI AND CHEESE", "MAC AND CHEESE"],
     "36": ["SPAGHETTI AND MEATBALLS"],
-    "37": ["SHORT RIBS", "RIBS"],
+    "37": ["SHORT RIBS", "RIBS", "SHORT RIB"],
     "38": ["BAGELS", "BAGEL"],
     "39": ["DONUTS", "DONUT"],
     "40": ["PASTA"],
@@ -44,16 +44,5 @@
     "43": ["CARROT"],
     "44": ["CORN"],
     "45": ["CEREAL"],
-    "46": ["MUFFIN],
-
-
-
-
-
-
-
-
-
-
-    "133": ["NOODLE"]
+    "46": ["MUFFIN"]
 }

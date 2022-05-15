@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/37.jpg-c5192e8c5edee53e85dca61e6838ee1c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Foods/37.jpg"
+dest_files=[ "res://.import/37.jpg-c5192e8c5edee53e85dca61e6838ee1c.stex" ]
+
 [params]
 
 compress/mode=0
